@@ -10,7 +10,7 @@
    */
 function ug_get_image_id($image_url) {
 	global $wpdb;
-	$sgattachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
+	$sgattachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid LIKE '%s';", $image_url ));
 	return $sgattachment[0];
 }
 add_shortcode('old-gal', 'url_gallery');
