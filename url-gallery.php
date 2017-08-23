@@ -1,7 +1,7 @@
 <?php
 /*
    Plugin Name: URL Gallery
-   Plugin URI: https://www.ajsalkeld.com
+   Plugin URI: https://www.ajsalkeld.com/blog/wp-plugin/2017/08/23/url-gallery-wordpress-shortcode/
    Description: A plugin to make galleries with their URLs.
    Version: 1.0
    Author: Andrew Salkeld
