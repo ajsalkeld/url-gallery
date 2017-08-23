@@ -26,11 +26,11 @@ function url_gallery($atts){
 	), $atts, 'url-gallery' ) );
 
 	if ($atts['imgs'] != null) {
-		$image_names = explode(", ",$atts['imgs']);
+		$image_names = explode(",",preg_replace('/\s+/', '', $atts['imgs']));
 		foreach($image_names as &$image_url) {
 			$image_url = ug_get_image_id($image_url);
 		}
-		$image_names = implode(', ', $image_names);
+		$image_names = implode(',', $image_names);
 		echo do_shortcode('[gallery ids="'.$image_names.'"]');
 	}
 	elseif ($atts['ids'] != null) {
